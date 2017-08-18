@@ -4,7 +4,7 @@ public class Pclass1 {
         System.out.println("test");
         System.out.println("test1");
         System.out.print("uuu");
-    //аккак
+    //аккак2
     }
 }
 
