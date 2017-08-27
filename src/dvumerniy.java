@@ -1,7 +1,7 @@
 public class dvumerniy {
     public static void main(String[] args) {
 
-        int arNumOfElements = 7;
+        int arNumOfElements = 5;
         int calcnum = 0;
         int[] calcArray = new int[arNumOfElements];
 
