@@ -8,11 +8,12 @@ public class Zadanie2508 {
         for (int i = 0; i < arNumOfElements; i++) {
             calcArray[i] = (int) (Math.random() * 1000);
             regularSumm = regularSumm + calcArray[i];
-            System.out.println(regularSumm + "===" + calcArray[i]);
+
         }
+        System.out.println("Regular - " + regularSumm);
 
         if (regularSumm == getRecursSumm(calcArray, calcArray.length - 1, recursSumm)) {
-            System.out.println("sovpalo");
+            System.out.println("Sovpalo");
             System.out.println(regularSumm + "===" + getRecursSumm(calcArray, calcArray.length - 1, recursSumm));
         } else {
             System.out.println("ne sovpalo");
@@ -22,19 +23,15 @@ public class Zadanie2508 {
 
 
     public static int getRecursSumm(int[] arToCalc, int position, int recursSumm) {
-        if (position > 0)
-        {
-            recursSumm = arToCalc[position] + getRecursSumm(arToCalc, --position, recursSumm);
-            //System.out.println("recusrs -- " + recursSumm);
-            return recursSumm;
-        }
-        if (position == 0)
-        {
+        if (position == 0) {
             recursSumm = recursSumm + arToCalc[position];
-            System.out.println("recusrs  final-- " + recursSumm);
+            System.out.println("recurs final!!-- " + recursSumm);
             return recursSumm;
         }
-        return recursSumm;
+
+        return  arToCalc[position] + getRecursSumm(arToCalc, position-1, recursSumm);
+
+
     }
 
 
