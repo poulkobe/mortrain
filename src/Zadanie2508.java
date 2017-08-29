@@ -12,24 +12,22 @@ public class Zadanie2508 {
         }
         System.out.println("Regular - " + regularSumm);
 
-        if (regularSumm == getRecursSumm(calcArray, calcArray.length - 1, recursSumm)) {
+        if (regularSumm == getRecursSumm(calcArray, calcArray.length - 1 )) {
             System.out.println("Sovpalo");
-            System.out.println(regularSumm + "===" + getRecursSumm(calcArray, calcArray.length - 1, recursSumm));
+            System.out.println(regularSumm + "===" + getRecursSumm(calcArray, calcArray.length - 1 ));
         } else {
             System.out.println("ne sovpalo");
-            System.out.println(regularSumm + "===" + getRecursSumm(calcArray, calcArray.length - 1, recursSumm));
+            System.out.println(regularSumm + "===" + getRecursSumm(calcArray, calcArray.length - 1 ));
         }
     }
 
 
-    public static int getRecursSumm(int[] arToCalc, int position, int recursSumm) {
+    public static int getRecursSumm(int[] arToCalc, int position) {
         if (position == 0) {
-            recursSumm = recursSumm + arToCalc[position];
-            System.out.println("recurs final!!-- " + recursSumm);
-            return recursSumm;
+            return arToCalc[position];
         }
 
-        return  arToCalc[position] + getRecursSumm(arToCalc, position-1, recursSumm);
+        return  arToCalc[position] + getRecursSumm(arToCalc, position-1 );
 
 
     }

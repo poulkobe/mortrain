@@ -4,4 +4,8 @@ public class Tester extends Person {
     String title;
     int numberOfBugs;
 
+    @Override
+    public Person[] getPersons() {
+        return new Person[]{};
+    }
 }

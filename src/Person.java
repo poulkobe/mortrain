@@ -1,13 +1,15 @@
-public class Person {
+public abstract class Person {
     private int age;
 
-    public int salary;
+    private int salary;
 
-    public int weight;
+    private int weight;
 
-    public String name;
+    private String name;
 
-    public String surename;
+    private String surename;
+
+    private Manager boss;
 
     public Person(int age, int salary, int weight, String name, String surename) {
         this.age = age;
@@ -23,17 +25,7 @@ public class Person {
     public Person() {
     }
 
-    public static void main(String[] args) {
-        Person igor = new Person(5,1111,55, "Igor", "Bakums");
-        Person[] massIgor = new Person[2];
-        massIgor[0]=new Person(5,1111,55, "Igor", "Bakums");
-        massIgor[1]=new Person(15,2111,155, "DIgor", "DBakums");
-        massIgor[0].printName();
-        Developer Vano = new Developer();
-        Vano.numberOfLines=17;
-        Vano.name="devEgor";
-        Vano.printName();
 
-    }
+     public abstract Person[] getPersons();
 
 }

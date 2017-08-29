@@ -4,4 +4,9 @@ public class Developer extends Person {
     String title;
     int numberOfLines;
 
+
+    @Override
+    public Person[] getPersons() {
+        return new Person[]{};
+    }
 }
