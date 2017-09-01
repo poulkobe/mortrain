@@ -53,16 +53,24 @@ public class MilkWay implements Universe {
         planetaZemplya.addObject(luna);
         Star Solnce = new Star("solnce", "middle star");
         Solnce.addObject(planetaZemplya);
-        milkway.addObject(planetaZemplya);
+        Solnce.addObject(planetaVenera);
+        Solnce.addObject(planetaMars);
+        //milkway.addObject(planetaZemplya);
         milkway.addObject(Solnce);
         Star Vinus = new Star("vinus", "yellow star");
+        Vinus.addObject(planetaZemplya);
+        milkway.addObject(Vinus);
 
+        milkway.getPlanetStars();
+        milkway.getUniverseName();
     }
 
-     public Star getPlanetStars(Planeta planet){
-        int planetNum=0;
-        for (Star checkingstar:objectStars){
-           if(checkingstar.)
+     public void getPlanetStars(){
+        int StarNum=0;
+        for (Object checkingstar:objectStars){
+            System.out.println(checkingstar.getNameOfObject());
+            System.out.println(checkingstar.getTypeOfObject());
+
         }
 }
 
